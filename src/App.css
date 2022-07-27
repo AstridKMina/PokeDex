@@ -1,0 +1,341 @@
+.App {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Input page */
+
+.myHeader {
+  /* background-color: #ff0000; */
+  /* height: 10rem; */
+  width: 100%;
+}
+
+.firstHeader img {
+  width: 100%;
+  object-fit: inherit;
+  height: 10rem;
+  border: 0.1rem solid black;
+}
+
+
+.ashImage {
+  height: 25rem;
+}
+
+.firstForm {
+  margin-bottom: 1rem;
+}
+
+.firstForm button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border: 0.09rem solid black;
+  height: 1.75rem;
+  padding-top: 0.1rem;
+  width: 2rem;
+}
+
+.firstInput {
+  height: 1.5rem;
+  border-radius: 1rem 0 0 1rem;
+  width: 12rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.firstInput input {
+  height: 1.5rem;
+  border: 0.1rem solid black;
+}
+
+.fa-paper-plane {
+  color: #ff0000;
+}
+
+::placeholder {
+  text-align: inherit;
+}
+
+.myBtn {
+  height: 1.88rem;
+}
+
+
+/* Pokemons page */
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 26%;
+  width: 50%;
+
+}
+
+.pokemonsList {
+  margin-top: 25rem;
+}
+
+.pokemonsList h3 {
+  font-size: 1.5rem;
+}
+
+.myForm {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.myInput {
+  border-radius: 0 0 0 1rem;
+  border: 0.14rem solid black;
+  width: 12rem;
+  height: 1.2rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.myForm button {
+  background-color: #ff0000;
+  border: 0.14rem solid black;
+  border-radius: 0 1rem 0 0;
+  height: 1.64rem;
+}
+
+select {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1rem;
+}
+
+.pokedex {
+  width: 100%;
+  height: 100%;
+}
+
+.pokemonsList {
+  height: 100%;
+  position: relative;
+
+
+}
+
+.pokemonsList h3 {
+  margin-top: 10rem;
+}
+
+
+.allPoke {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+
+}
+
+.itemDiv {
+  position: relative;
+  max-width: 18rem;
+  height: 15rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  margin: 1rem;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.1 solid black; */
+  /* box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px; */
+  box-shadow:
+    inset -0.5em -0.5em rgba(0, 0, 0, 0.04),
+    0 0 2px rgba(0, 0, 0, 0.1),
+    0px 7px 29px 0px rgba(100, 100, 111, 0.9);
+  /* box-shadow: 30px 30px 30px rgba(255,0,0,0.5);             */
+}
+
+.itemDiv:hover {
+  height: 20rem;
+}
+
+.itemDiv .cardImg {
+  position: relative;
+  width: 15rem;
+  max-height: 15rem;
+  top: -0.2rem;
+  z-index: 1;
+  background-color: rgba(5, 136, 235, 0.4);
+}
+
+.itemDiv .content {
+  position: relative;
+  margin-top: -0.1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.itemDiv:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+ul {
+  text-align: left;
+}
+
+li {
+  list-style: none;
+}
+
+.my1Image {
+  max-width: 100%;
+  height: 8rem;
+
+}
+
+.bigBtn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+.pokeDiv {
+  display: flex;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  width: 10rem;
+}
+
+.pokeDiv input {
+  width: 3rem;
+  height: 1.7rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  border: 0.1rem solid black;
+}
+
+.pokeBtn {
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0.5rem;
+  border: none;
+}
+
+.fa-caret-right,
+.fa-caret-left {
+  width: 2rem;
+  color: white;
+}
+
+.numBtn {
+  height: 2rem;
+  width: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0.2rem;
+  border: none;
+  border-radius: 10%;
+}
+
+
+/* Modal Page */
+
+.btnImg {
+  filter: drop-shadow(5px 8px 32px rgba(31, 38, 135, 0.8));
+  position: absolute;
+  top: 68%;
+  left: 7rem;
+  width: 8rem;
+  cursor: pointer;
+  /* filter: drop-shadow rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+.btnImg1 {
+  filter: drop-shadow(5px 8px 32px rgba(31, 38, 135, 0.8));
+  position: absolute;
+  top: 68%;
+  right: 7rem;
+  width: 8rem;
+  cursor: pointer;
+  /* filter: drop-shadow rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.containerModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  height: 40rem;
+  background-color: white;
+  margin-top: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.containerModal1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 30rem;
+  background-color: white;
+  margin-top: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.containerModal ul {
+  columns: 5;
+  -webkit-columns: 5;
+  -moz-columns: 5;
+}
+
+.containerModal li {
+  font-size: 0.8rem;
+}
+
+.containerModal button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+.containerModal1 button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+
+.modalImg {
+  width: 10rem;
+
+}
+
+
