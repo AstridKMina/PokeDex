@@ -18,16 +18,16 @@ function App() {
         <Routes>
           <Route path='/' element={<UserInput />} />
 
-          {/* /* <Route element={<ProtectedRoutes/>}> */ }
-          <Route path='/Pokemon' element={<Pokemon />} />
-          <Route path='/Pokemons/:id' element={<PokemonDetail />} />
-          <Route path='/PokemonItem' element={<PokemonItem />} />
-// {/* </Route> */}
+          <Route element={<ProtectedRoutes />}>
+            <Route path='/Pokemon' element={<Pokemon />} />
+            <Route path='/Pokemons/:id' element={<PokemonDetail />} />
+            <Route path='/PokemonItem' element={<PokemonItem />} />
+          </Route>
 
-          
-       </Routes>
+
+        </Routes>
       </HashRouter>
-    </div> 
+    </div>
   )
 }
 
