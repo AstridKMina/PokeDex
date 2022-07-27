@@ -7,7 +7,7 @@ import UserInput from './components/UserInput'
 import PokemonDetail from './components/PokemonDetail'
 import ProtectedRoutes from './components/ProtectedRoutes'
 import PokemonItem from './components/PokemonItem'
-import PokemonVideo from './components/pokemonVideo'
+
 
 function App() {
   const [count, setCount] = useState(0)

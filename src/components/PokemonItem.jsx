@@ -11,7 +11,7 @@ const PokemonItem = ({ pokemonUrl }) => {
 
     useEffect(() => {
         axios.get(pokemonUrl).then(res => setPokemon(res.data))
-        // ("https://pokeapi.co/api/v2/pokemon/1/")
+   
 
     }, []);
 
