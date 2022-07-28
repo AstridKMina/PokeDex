@@ -11,8 +11,8 @@ body {
 /* Input page */
 
 .myHeader {
-  /* background-color: #ff0000; */
-  /* height: 10rem; */
+  background-color: #ff0000;
+  height: 10rem;
   width: 100%;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .pokemonsList {
-  margin-top: 25rem;
+  margin-top: 14rem;
 }
 
 .pokemonsList h3 {
@@ -247,6 +247,17 @@ li {
 
 
 /* Modal Page */
+
+.modalBtn {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color:#f3bb0e;
+}
+
+.fa-xmark {
+  font-weight: bold;
+}
 
 .btnImg {
   filter: drop-shadow(5px 8px 32px rgba(31, 38, 135, 0.8));

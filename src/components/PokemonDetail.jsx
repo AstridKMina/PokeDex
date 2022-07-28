@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
 import Modal from './Modal';
 import Modal2 from './Modal2';
+import pokemon_title from '../Assets/pokemon_title.png'
 
 
 const PokemonDetail = () => {
@@ -35,7 +36,7 @@ const PokemonDetail = () => {
     return (
         <div className='details'>
 
-            <img className='imgTitle' src="./src/Assets/pokemon_title.png" alt="" />
+            <img className='imgTitle' src={pokemon_title} alt="" />
             <h1>{pokemon.name} </h1>
 
             <div className="card">

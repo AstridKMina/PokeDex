@@ -25,7 +25,7 @@ const Modal = ({ pokemon, toggle, isOpen }) => {
                 <div className='modal'>
                     <div className="containerModal">
                         <h3>Movements</h3>
-                        <button onClick={toggle}>x</button>
+                        <button className='modalBtn' onClick={toggle}><i className="fa-solid fa-xmark"></i></button>
                         <img className='modalImg' src={pokemon.sprites?.front_shiny} alt="" />
                         <ul>
                             {pokemon?.moves?.map(poke => (

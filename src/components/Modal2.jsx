@@ -18,7 +18,7 @@ const Modal2 = ({ pokemon, toggle1, isOpen1 }) => {
                 <div className='modal'>
                     <div className="containerModal1">
                         <h3>Details</h3>
-                        <button onClick={toggle1}>x</button>
+                        <button  className='modalBtn' onClick={toggle1}><i className="fa-solid fa-xmark"></i></button>
                         <img className='modalImg' src={pokemon.sprites?.front_shiny} alt="" />
                         <ul>
                             <li> Species:{pokemon.species.name}</li>

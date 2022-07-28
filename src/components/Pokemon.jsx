@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux/es/exports';
 import PokemonItem from './PokemonItem';
 import { useNavigate } from 'react-router-dom'
+import logo from '../Assets/logo.svg' 
 
 
 const Pokemon = () => {
@@ -69,8 +70,8 @@ const Pokemon = () => {
     return (
 
         <div className='pokedex' >
-            <header className='myHeader'>
-                <img className='logo' src="./src/Assets/logo.svg" alt="" />
+            <header style={{backgroundColor: "red"}} className='myHeader'>
+                <img className='logo' src={logo} alt="pokemon-title" />
             </header>
 
           
