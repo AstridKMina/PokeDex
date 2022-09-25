@@ -10,7 +10,7 @@ import PokemonItem from './components/PokemonItem'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <div className="App">
@@ -23,8 +23,6 @@ function App() {
             <Route path='/Pokemons/:id' element={<PokemonDetail />} />
             <Route path='/PokemonItem' element={<PokemonItem />} />
           </Route>
-
-
         </Routes>
       </HashRouter>
     </div>

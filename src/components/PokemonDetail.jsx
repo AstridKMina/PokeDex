@@ -29,9 +29,7 @@ const PokemonDetail = () => {
         setIsOpen1(!isOpen1)
     }
 
-    // console.log(pokemon)
-
-
+   
 
     return (
         <div className='details'>
@@ -42,8 +40,7 @@ const PokemonDetail = () => {
             <div className="card">
                 <div className="circle">
                     <img className="imgDetails" src={pokemon.sprites?.other.dream_world.front_default} alt="" />
-{/* 
-                    <img className='grassImg' src="./src/Assets/grass.png" alt="" /> */}
+
                 </div>
                 <div className="content">
                     <div className='measures'>
@@ -67,7 +64,6 @@ const PokemonDetail = () => {
                 </div>
             </div>
             <div  onClick={toggle}><img className='btnImg' src=" https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/072fa096-b852-4161-ae5d-8f42f037c051/d53dp2p-486dc6b9-730e-4908-bcb8-0dcfda8a96df.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MmZhMDk2LWI4NTItNDE2MS1hZTVkLThmNDJmMDM3YzA1MVwvZDUzZHAycC00ODZkYzZiOS03MzBlLTQ5MDgtYmNiOC0wZGNmZGE4YTk2ZGYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BQEuHqarrPr2mcMG92G3eCUfXftXBWiKVapqGqKUNgs" alt="" /></div>
-
             <div  onClick={toggle1}><img className='btnImg1' src=" https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/072fa096-b852-4161-ae5d-8f42f037c051/d53dp2p-486dc6b9-730e-4908-bcb8-0dcfda8a96df.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA3MmZhMDk2LWI4NTItNDE2MS1hZTVkLThmNDJmMDM3YzA1MVwvZDUzZHAycC00ODZkYzZiOS03MzBlLTQ5MDgtYmNiOC0wZGNmZGE4YTk2ZGYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BQEuHqarrPr2mcMG92G3eCUfXftXBWiKVapqGqKUNgs" alt="" /></div>
             <Modal pokemon={pokemon} toggle={toggle} isOpen={isOpen}/>
             <Modal2 pokemon={pokemon} toggle1={toggle1} isOpen1={isOpen1}/>

@@ -2,15 +2,8 @@ import React from 'react';
 
 const Modal2 = ({ pokemon, toggle1, isOpen1 }) => {
 
-    // const [isOpen, setIsOpen] = useState(false)
 
 
-    // const modalWindow2 = () => {
-
-    //     setIsOpen(!isOpen)
-    // }
-
-    console.log(pokemon)
 
     return (
         <div>

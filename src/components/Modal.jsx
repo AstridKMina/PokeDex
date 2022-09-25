@@ -1,26 +1,16 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 
-
+import React from 'react';
 
 
 
 
 const Modal = ({ pokemon, toggle, isOpen }) => {
 
-    // const [isOpen, setIsOpen] = useState(false)
-
-
-    // const modalWindow2 = () => {
-
-    //     setIsOpen(!isOpen)
-    // }
 
     console.log(pokemon.moves)
 
     return (
-        <div>
+        <div className='myModal'> 
             {isOpen && (
                 <div className='modal'>
                     <div className="containerModal">

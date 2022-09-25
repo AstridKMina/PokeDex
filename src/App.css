@@ -1,31 +1,49 @@
 .App {
   text-align: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 100%;
+  width: 100%;
 }
 
 body {
   overflow-x: hidden;
   margin: 0;
+  height: 100%;
+  width: 100%;
+
 }
 
 /* Input page */
 
 .myHeader {
   background-color: #ff0000;
-  height: 10rem;
+  height: 15vh;
+  min-height: 8vh;
   width: 100%;
 }
 
 .firstHeader img {
   width: 100%;
-  object-fit: inherit;
+  object-fit: cover;
   height: 10rem;
   border: 0.1rem solid black;
 }
 
+.inicialPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 77vh;
+}
+
+.inicialPage h1 {
+  margin-top: 0.5rem;
+}
 
 .ashImage {
   height: 25rem;
+  width: 10rem;
 }
 
 .firstForm {
@@ -66,19 +84,65 @@ body {
   height: 1.88rem;
 }
 
+/* Modal pokemons page */
+
+.player-wrapper {
+  position: relative;
+
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  background-color: rgba(0, 0, 0, 1);
+
+}
+
 
 /* Pokemons page */
 
-.logo {
+.pokedex {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+
+}
+
+.pokedex video {
   position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.3;
+  object-fit: contain;
+}
+
+.logo {
   top: 0;
   left: 26%;
   width: 50%;
+  min-width: 50%;
 
 }
 
 .pokemonsList {
-  margin-top: 14rem;
+  margin-top: 15rem;
 }
 
 .pokemonsList h3 {
@@ -90,6 +154,7 @@ body {
   justify-content: right;
   align-items: center;
   margin-right: 2rem;
+  margin-bottom: 3rem;
 }
 
 .myInput {
@@ -110,52 +175,44 @@ body {
 select {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1rem;
-}
-
-.pokedex {
-  width: 100%;
-  height: 100%;
+  margin-bottom: 3rem;
 }
 
 .pokemonsList {
   height: 100%;
   position: relative;
-
-
 }
 
 .pokemonsList h3 {
   margin-top: 10rem;
 }
 
-
 .allPoke {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 3rem;
-
+  width: 100%;
+  height: 100vh;
 }
 
 .itemDiv {
-  position: relative;
-  max-width: 18rem;
+  max-width: 30rem;
   height: 15rem;
   background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   transition: 0.3s ease-in-out;
-  margin: 1rem;
+  margin: 3rem;
   width: 20rem;
   justify-content: center;
   align-items: center;
-  /* border: 0.1 solid black; */
-  /* box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px; */
+  border: 0.1 solid black;
+
   box-shadow:
     inset -0.5em -0.5em rgba(0, 0, 0, 0.04),
     0 0 2px rgba(0, 0, 0, 0.1),
     0px 7px 29px 0px rgba(100, 100, 111, 0.9);
-  /* box-shadow: 30px 30px 30px rgba(255,0,0,0.5);             */
 }
 
 .itemDiv:hover {
@@ -167,7 +224,6 @@ select {
   width: 15rem;
   max-height: 15rem;
   top: -0.2rem;
-  z-index: 1;
   background-color: rgba(5, 136, 235, 0.4);
 }
 
@@ -186,17 +242,26 @@ select {
 }
 
 ul {
-  text-align: left;
+  columns: 1;
 }
 
-li {
+.col3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.col3 li {
   list-style: none;
+
+
 }
 
 .my1Image {
   max-width: 100%;
   height: 8rem;
-
 }
 
 .bigBtn {
@@ -246,107 +311,24 @@ li {
 }
 
 
-/* Modal Page */
 
-.modalBtn {
-  border-radius: 50%;
-  height: 2rem;
-  width: 2rem;
-  background-color:#f3bb0e;
+
+
+
+@media(max-width:900px) {
+  .logo {
+    width: 80%;
+  }
+
+  .pokemonsList {
+    margin-top: 3rem;
+  }
+
+  .myForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+  }
 }
-
-.fa-xmark {
-  font-weight: bold;
-}
-
-.btnImg {
-  filter: drop-shadow(5px 8px 32px rgba(31, 38, 135, 0.8));
-  position: absolute;
-  top: 68%;
-  left: 7rem;
-  width: 8rem;
-  cursor: pointer;
-  /* filter: drop-shadow rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-}
-
-.btnImg1 {
-  filter: drop-shadow(5px 8px 32px rgba(31, 38, 135, 0.8));
-  position: absolute;
-  top: 68%;
-  right: 7rem;
-  width: 8rem;
-  cursor: pointer;
-  /* filter: drop-shadow rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-}
-
-.modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-
-.containerModal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 45rem;
-  height: 40rem;
-  background-color: white;
-  margin-top: 1rem;
-  position: relative;
-  border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-}
-
-.containerModal1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25rem;
-  height: 30rem;
-  background-color: white;
-  margin-top: 1rem;
-  position: relative;
-  border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-}
-
-.containerModal ul {
-  columns: 5;
-  -webkit-columns: 5;
-  -moz-columns: 5;
-}
-
-.containerModal li {
-  font-size: 0.8rem;
-}
-
-.containerModal button {
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-}
-
-.containerModal1 button {
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-}
-
-.modalImg {
-  width: 10rem;
-
-}
-
-
