@@ -1,4 +1,4 @@
-/* Details page */
+Details page
 
 .details {
     height: 100vh;
@@ -16,7 +16,6 @@
     text-transform: uppercase;
     font-size: 2rem;
     filter: drop-shadow(5px 8px 32px rgba(31, 38, 135, 0.8));
-
 }
 
 .card {
@@ -26,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.5s;
+    transition: all 0.5s ease-in-out;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -139,7 +138,6 @@
     justify-content: center;
     margin-left: 0.5rem;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-
 }
 
 .abilities,
@@ -147,11 +145,11 @@
     max-width: 18rem;
     background-color: rgba(144, 137, 137, 0.3);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-
 }
 
 .abilitiesUl {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
 }
@@ -161,9 +159,8 @@
     display: inline;
     background-color: white;
     height: 2rem;
-    width: 15rem;
+    width: auto;
     text-align: center;
-
 }
 
 .statsUl {
@@ -171,17 +168,15 @@
     flex-direction: column;
     justify-content: center;
     padding: 0;
-
 }
 
 .statsUl li {
-    margin: 1rem;
+    margin: 0.5rem;
     display: inline;
     background-color: white;
-    height: 2rem;
+    height: 1.3rem;
     width: 90%;
     text-align: center;
-
 }
 
 
@@ -205,7 +200,6 @@
     left: 9rem;
     width: 8vw;
     cursor: pointer;
-
 }
 
 .btnImg1 {
@@ -262,7 +256,6 @@
     position: relative;
     border-radius: 1rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
 }
 
 .containerModal ul {
@@ -289,7 +282,6 @@
 
 .modalImg {
     width: 10rem;
-
 }
 
 
@@ -309,17 +301,9 @@
         clip-path: circle(38% at center);
     }
 
-    .card .content {
-        width: 100%;
-        left: 0;
-        top: 40%;
-        padding: 40px;
-    }
-
     .card:hover .content {
 
         top: 30%;
-        height: 50%;
         width: 50%;
     }
 
@@ -335,6 +319,14 @@
         right: 60%;
         width: 50%;
     }
+
+    .card:hover .imgDetails {
+        bottom: 50%;
+        right: 50%;
+        width: 60%;
+        left: 50%;
+    }
+
 
     .imgTitle {
         width: 100%;
@@ -355,6 +347,7 @@
 
     h2 {
         font-size: 90%;
+        padding-top: 0.5rem;
     }
 
     .btnImg {
@@ -363,7 +356,6 @@
         left: 3rem;
         width: 9vw;
         cursor: pointer;
-        /* filter: drop-shadow rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     }
 
     .btnImg1 {
@@ -372,15 +364,12 @@
         right: 3rem;
         width: 9vw;
         cursor: pointer;
-        /* filter: drop-shadow rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     }
 
     .containerModal ul {
         height: 100%;
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-
+        display: flex;
+        flex-direction: column;
     }
 
     .containerModal {
@@ -394,8 +383,6 @@
     .containerModal {
         height: 20rem;
         max-width: 20rem;
-        /* height: 100%; */
-        /* width: 50%; */
         overflow-y: scroll;
 
     }

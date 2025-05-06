@@ -1,32 +1,33 @@
-import { useState } from 'react'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import './detailsPage.css'
-import Pokemon from './components/Pokemon'
-import UserInput from './components/UserInput'
+import UserInput from './pages/UserInput'
 import PokemonDetail from './components/PokemonDetail'
 import ProtectedRoutes from './components/ProtectedRoutes'
-import PokemonItem from './components/PokemonItem'
+import { PokemonCard } from './components/PokemonCard'
+import { PokemonPage } from './pages/PokemonPage'
 
 
 function App() {
- 
+
 
   return (
     <div className="App">
-      <HashRouter>
-        <Routes>
-          <Route path='/' element={<UserInput />} />
+      <Routes>
+        <Route path='/' element={<UserInput />} />
 
-          <Route element={<ProtectedRoutes />}>
-            <Route path='/Pokemon' element={<Pokemon />} />
-            <Route path='/Pokemons/:id' element={<PokemonDetail />} />
-            <Route path='/PokemonItem' element={<PokemonItem />} />
-          </Route>
-        </Routes>
-      </HashRouter>
+        <Route element={<ProtectedRoutes />}>
+
+        <Route path="/Pokemons/type/:type" element={<PokemonPage />} />
+        <Route path="/Pokemons/:id" element={<PokemonDetail />} />
+        <Route path="/Pokemons" element={<PokemonPage />} />
+        <Route path="/PokemonCard" element={<PokemonCard />} />
+
+        </Route>
+      </Routes>
     </div>
-  )
+  );
 }
+
 
 export default App

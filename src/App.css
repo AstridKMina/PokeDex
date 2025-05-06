@@ -1,26 +1,23 @@
-.App {
-  text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  height: 100%;
-  width: 100%;
+* {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0; 
 }
 
 body {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   overflow-x: hidden;
-  margin: 0;
-  height: 100%;
-  width: 100%;
 
+}
+
+button:focus,
+input:focus {
+    outline: 2px solid #ff0000; 
+    outline-offset: 2px;
 }
 
 /* Input page */
-
-.myHeader {
-  background-color: #ff0000;
-  height: 15vh;
-  min-height: 8vh;
-  width: 100%;
-}
 
 .firstHeader img {
   width: 100%;
@@ -34,61 +31,72 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 77vh;
+  height: 100vh;
+  padding: 1rem;
 }
 
 .inicialPage h1 {
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .ashImage {
   height: 25rem;
-  width: 10rem;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .firstForm {
-  margin-bottom: 1rem;
-}
-
-.firstForm button {
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none;
-  border: 0.09rem solid black;
-  height: 1.75rem;
-  padding-top: 0.1rem;
-  width: 2rem;
+  margin-top: 1rem;
 }
 
 .firstInput {
-  height: 1.5rem;
+  height: 2.26rem;
+  width: 15rem;
+  padding: 1rem;
   border-radius: 1rem 0 0 1rem;
-  width: 12rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
 
-.firstInput input {
-  height: 1.5rem;
-  border: 0.1rem solid black;
+.myBtn {
+  height: 2.2rem;
+  width: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-top: 0.1rem;
+  border: 0.09rem solid black;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+.myBtn:hover {
+  background-color: #cc0000;
+}
+
 
 .fa-paper-plane {
   color: #ff0000;
 }
 
-::placeholder {
-  text-align: inherit;
+.fa-paper-plane:hover {
+  color: #f4efef;
 }
 
-.myBtn {
-  height: 1.88rem;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
 }
 
-/* Modal pokemons page */
+/* Modal video pokemons page */
 
 .player-wrapper {
   position: relative;
-
 }
 
 .react-player {
@@ -106,31 +114,58 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
-
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 1);
+  opacity: 1;
+  transform: scale(1); 
+  transition: opacity 2s ease-out, transform 1.2s ease-in-out;
+}
 
+.fade-out {
+  opacity: 0.5;
+  transform: scale(0);
+  pointer-events: none;
 }
 
 
+
 /* Pokemons page */
+
 
 .pokedex {
   width: 100%;
   height: 100%;
   position: relative;
   text-align: center;
-
 }
 
 .pokedex video {
   position: absolute;
   top: 0;
+left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
-  opacity: 0.3;
-  object-fit: contain;
+  opacity: 0.8; 
+  object-fit: cover;
+}
+
+
+.pokedex video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1; 
+}
+
+.myHeader {
+  background-color: #ff0000;
+  height: 15vh;
+  min-height: 8vh;
+  width: 100%;
 }
 
 .logo {
@@ -138,15 +173,30 @@ body {
   left: 26%;
   width: 50%;
   min-width: 50%;
+  margin-bottom: 5rem;
+}
 
+.pokemonPage-main {
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pokemonPage-main section {
+  margin-top: 1rem;
+}
+
+.pokemonList-section {
+  height: 100%;
 }
 
 .pokemonsList {
-  margin-top: 15rem;
+  margin-top: 14rem;
 }
 
 .pokemonsList h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .myForm {
@@ -158,18 +208,20 @@ body {
 }
 
 .myInput {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 0.5rem;
   border-radius: 0 0 0 1rem;
   border: 0.14rem solid black;
   width: 12rem;
-  height: 1.2rem;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 2.4rem;
 }
 
 .myForm button {
   background-color: #ff0000;
   border: 0.14rem solid black;
   border-radius: 0 1rem 0 0;
-  height: 1.64rem;
+  height: 2.4rem;
+  width: 2rem;
 }
 
 select {
@@ -251,12 +303,8 @@ ul {
   justify-content: center;
 }
 
-
-
 .col3 li {
   list-style: none;
-
-
 }
 
 .my1Image {
@@ -274,19 +322,25 @@ ul {
 
 .pokeDiv {
   display: flex;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
-  width: 10rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 14rem;
 }
 
 .pokeDiv input {
   width: 3rem;
-  height: 1.7rem;
+  height: 2rem;
   margin-right: 0.5rem;
   margin-top: 0.5rem;
   text-align: center;
   border: 0.1rem solid black;
 }
+
+.pokeDiv p {
+  margin: 1rem 0;
+}
+
 
 .pokeBtn {
   height: 2rem;
@@ -294,6 +348,7 @@ ul {
   margin: 0.5rem;
   border: none;
 }
+
 
 .fa-caret-right,
 .fa-caret-left {
@@ -310,16 +365,32 @@ ul {
   border-radius: 10%;
 }
 
+/* Pagination */
 
+.pagination {
+  margin: 2rem;
+}
 
+.pagination-btn {
+  background-color: rgba(0, 0, 0, 0.596);
+  margin: 0.2rem;
+}
+
+/* item window */
+
+.my1Image {
+  margin: 1rem;
+}
 
 
 
 @media(max-width:900px) {
   .logo {
-    width: 80%;
-  }
-
+    width: 50rem;
+    max-width: 90%;
+    min-width: 80%;
+    margin-top: 2.5rem;
+}
   .pokemonsList {
     margin-top: 3rem;
   }
